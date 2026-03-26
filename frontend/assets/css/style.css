@@ -1,0 +1,102 @@
+/* RESET MẶC ĐỊNH */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F8F4E6;
+}
+
+/* ====== HEADER & NAVBAR - ĐÃ TINH CHỈNH THEO FIGMA ====== */
+header {
+    background-color: #F2E8CF; /* Màu be chuẩn thiết kế */
+    padding: 0; /* Bỏ padding cũ để dùng chiều cao cố định */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; /* Giữ menu ở trên cùng khi cuộn trang */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 90px; /* Tăng độ cao để thanh menu trông sang hơn */
+    width: 95%; /* Dùng width của container */
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* LOGO */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 95px; /* Size logo vừa vặn như Figma */
+    width: auto;
+    border-radius: 50%; /* Đảm bảo logo tròn trịa */
+}
+
+/* MENU LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 80px; /* Tăng khoảng cách giữa các mục menu lên */
+    margin-left: 50px;  /* Thay đổi số 50px này để quyết định khoảng cách với Logo */
+    margin-right: auto; /* Lệnh này bắt buộc khoảng trống thừa phải dồn hết về bên phải, đẩy nút Đăng nhập đi */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333333; /* Chuyển sang màu tối hơn cho rõ nét */
+    font-weight: 550; /* Chữ đậm (Bold) như trong thiết kế */
+    font-size: 24px;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8B5E3C; /* Màu nâu gỗ khi di chuột */
+}
+
+/* NÚT ĐĂNG NHẬP */
+.btn-login {
+    background-color: #D6A87A; /* Màu cam nâu chuẩn */
+    color: white;
+    border: none;
+    padding: 12px 35px; /* Nút dài và cân đối hơn */
+    border-radius: 12px; /* Bo góc mềm mại hơn (đúng kiểu hiện đại) */
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(214, 168, 122, 0.3); /* Bóng đổ cùng màu nút */
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #BF9365;
+    transform: translateY(-2px); /* Hiệu ứng nhích nhẹ khi hover */
+    box-shadow: 0 6px 15px rgba(214, 168, 122, 0.4);
+}
+
+/* ====== HERO BANNER (ẢNH CHÈN FULL MÀN HÌNH) ====== */
+.hero-banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+/* CHỈNH LẠI TÊN CLASS CHỖ NÀY CHO KHỚP VỚI HTML */
+.full-banner-img {
+    width: 100vw; 
+    max-width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    display: block;
+}
